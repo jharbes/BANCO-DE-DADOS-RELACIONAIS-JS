@@ -1,3 +1,5 @@
+<img src="simbolo-bancoDeDados.png" align="right" width="150">
+
 # BANCO-DE-DADOS-RELACIONAIS-JS
  
 <h3>Curso de Bancos de Dados Relacionais MySQL, PostgreSQL, SQL Server e Oracle - Udemy</h3>
