@@ -16,7 +16,7 @@ ceil() - retorna o menor valor inteiro maior ou igual com base no valor informad
 
 floor() - retorna o menor valor inteiro menor ou igual com base no valor informado (retira a parte decimal) ex: 7.5=7
 
-truncate() - retira a parte decimal ex: 7.4=7
+truncate() - retira as partes decimais de um número de acordo com o indicado ex: truncate(22.757,1) = 22.7
 
 round() - arredonda de acordo com o valor informado ex: 7.6=8
 
