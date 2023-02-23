@@ -38,7 +38,7 @@ CREATE TABLE Aluno_Curso (
     id_AlunoCurso int auto_increment PRIMARY KEY,
     fk_idAluno int,
     fk_idCurso int,
-    dataInscricaoCurso date,
+    dataInscricaoCurso datetime default current_timestamp,
     valorPagoCurso float(10,2)
 );
 
