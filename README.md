@@ -1,4 +1,4 @@
-<img src="simbolo-bancoDeDados.png" align="right" width="150">
+<img src="simbolo-bancoDeDados.png" align="right" width="100">
 
 # BANCO-DE-DADOS-RELACIONAIS-JS
  
