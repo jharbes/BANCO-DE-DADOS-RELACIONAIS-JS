@@ -2,13 +2,14 @@
 
 Regras da 3ª Forma NORMAL
 
-1- A tabela precisa estar na primeira forma NORMAL
+1- A tabela precisa estar na primeira forma NORMAL*
 	
 	- Ter uma identificação única para cada registro.
 	- Atributos com valores atômicos.
 	
 
-2- Não podem possui dependências parciais em relação à chave primária
+2- A tabela precisa estar na segunda forma NORMAL* 
+	(Não podem possui dependências parciais em relação à chave primária)
 
 	- Todos os atributos não chave devem ser total e funcionalmente dependentes da chave primária.
 
