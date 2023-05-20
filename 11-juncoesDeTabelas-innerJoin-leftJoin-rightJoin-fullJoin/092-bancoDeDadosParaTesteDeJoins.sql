@@ -1,5 +1,5 @@
 /*remove o banco de dados*/
-/*DROP DATABASE `universidade_u`;*/
+DROP DATABASE `universidade_u`;
 
 /*cria o banco de dados*/
 CREATE DATABASE `universidade_u`;
