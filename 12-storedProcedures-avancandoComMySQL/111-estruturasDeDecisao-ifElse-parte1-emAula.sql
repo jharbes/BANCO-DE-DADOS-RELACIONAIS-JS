@@ -22,10 +22,23 @@ create procedure proc_ifelse()
 comment 'Exemplo de uso de condicionais ifelse'
 begin
 
-	declare idade int default 30;
+	declare idade int default 15;
+    declare sexo char(1) default 'M';
     
-    if idade>=18 then
-		select 'Maior de idade';
+    if idade>=18 and sexo='M' then
+		select 'Ele é maior de idade';
+	end if;
+    
+    if idade<18 and sexo='M' then
+		select 'Ele é menor de idade';
+	end if;
+    
+    if idade>=18 and sexo='F' then
+		select 'Ela é maior de idade';
+	end if;
+    
+    if idade<18 and sexo='F' then
+		select 'Ela é menor de idade';
 	end if;
     
 end
@@ -37,3 +50,33 @@ show procedure status where Db='universidade_u';
 drop procedure universidade_u.proc_ifelse;
 
 call proc_ifelse();
+
+
+
+delimiter $$
+create procedure proc_ifelse2()
+comment 'Exemplo de uso de condicionais ifelse numero 2'
+begin
+
+	declare idade int default 15;
+    declare sexo char(1) default 'M';
+    
+    if idade>=18 and sexo='M' then
+		select 'Ele é maior de idade';
+	end if;
+    
+    if idade<18 and sexo='M' then
+		select 'Ele é menor de idade';
+	end if;
+    
+    if idade>=18 and sexo='F' then
+		select 'Ela é maior de idade';
+	end if;
+    
+    if idade<18 and sexo='F' then
+		select 'Ela é menor de idade';
+	end if;
+    
+end
+$$
+delimiter ;
