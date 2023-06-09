@@ -34,3 +34,38 @@ begin
 end
 $$
 delimiter ;
+
+drop procedure universidade_u.proc_ifelse4;
+
+call proc_ifelse4();
+
+
+
+delimiter $$
+create procedure proc_ifelse5()
+comment 'Exemplo de uso de condicionais ifelse numero 5'
+begin
+    
+    declare idade int;
+    
+    set idade=(select timestampdiff(year,data_nascimento,curdate()) from aluno where idaluno=5);
+    
+    if idade>=0 and idade<=15 then
+		select 'Criança';
+	elseif idade<=29 then
+		select 'Jovem';
+	elseif idade<=59 then
+		select 'Adulto';
+	else
+		select 'Idoso';
+	end if;
+    
+end
+$$
+delimiter ;
+
+drop procedure universidade_u.proc_ifelse5;
+
+select timestampdiff(year,data_nascimento,curdate()) from aluno where idaluno=5;
+
+call proc_ifelse5();
