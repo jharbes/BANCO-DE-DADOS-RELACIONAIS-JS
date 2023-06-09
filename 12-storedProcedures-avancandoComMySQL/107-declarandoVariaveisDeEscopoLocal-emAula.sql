@@ -31,3 +31,34 @@ feita atraves da instrucao DEFAULT
 
 */
 
+drop procedure universidade_u.proc_variaveis_escopo_local1;
+
+delimiter $$
+create procedure proc_variaveis_escopo_local1()
+begin
+	-- declaramos x e ja indicamos o valor inicial de 10 inteiro
+    -- declaramos papagaio e colocamos como float mas sem indicar
+    -- seu valor inicial
+    -- tipagem forte
+	declare x int default 10;
+    declare papagaio float(8,2);
+    
+    -- logica da procedure, colocamos o valor da variavel papagaio como
+    -- 20.25, para isso usamos o set
+    set papagaio = 20.45;
+    
+    select papagaio as variavel_escopo_local;
+end
+$$
+delimiter ;
+
+show procedure status where Db='universidade_u';
+
+call proc_variaveis_escopo_local1();
+
+
+-- observe que no caso das variaveis de escopo de sessao a tipagem
+-- é fraca e pode ser alterada dinamicamente
+set @nome = 'Jorge';
+set @nome = 10;
+select @nome;
